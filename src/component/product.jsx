@@ -7,7 +7,7 @@ export class product extends Component {
     render() {
         return (
                 <div className="row">
-                    <div className="col-md-6">
+                    <div className="col-lg-6">
                                 <div className="row mb-2">
                                 <div className="col-2"><span>{this.props.product.name}</span></div>
                                 <div className="col-1"><span style={{width:40},{height:40},{fontSize:17}} className={this.props.product.count == 0 ? 'badge bg-danger mt-1': 'badge bg-primary mt-1'}>{this.props.product.count}</span></div>
