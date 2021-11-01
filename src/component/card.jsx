@@ -6,7 +6,7 @@ export class Card extends Component {
         return (
             <div>
                     <div className="container">
-                        <div className="row">
+                        <div className="row ">
                             <div className="col-md-12">
                             <h1 style={{textTransform:'uppercase'}} className="mt-2 mb-4">Shoping Card</h1>
                             </div>
