@@ -18,7 +18,13 @@ export class product extends Component {
                                 <div className="col-md-4">
                                     <div className="row ">
                                     <div className="col-md-2 col"><span>{this.props.product.name}</span></div>
-                                <div className="col-md-1 col-2"><span style={{width:40},{height:40},{fontSize:17}} className={this.props.product.count == 0 ? 'badge bg-danger mt-1': 'badge bg-primary mt-1'}>{this.props.product.count}</span></div>
+                                <div className="col-md-1 col-2"><span style={
+                                    {
+                                        width:40,
+                                        height:40,
+                                        fontSize:17,
+                                        lineHeight:'28px'
+                                    }} className={this.props.product.count === 0 ? 'badge bg-danger mt-1': 'badge bg-primary mt-1'}>{this.props.product.count}</span></div>
                                     </div>
                                 </div>
 
@@ -28,7 +34,7 @@ export class product extends Component {
                                 <div className="col-md-1 col-2"> <button className="btn btn-primary" onClick={()=>this.props.onDecrement(this.props.product)}><i class="fas fa-minus"></i></button> </div>
                                 <div className="col-md-1 col-2"> <button className="btn btn-primary" onClick={()=>this.props.onDelete(this.props.product)}><i class="fas fa-trash"></i></button> </div>
                                 {this.props.product.count <= 0 ? 
-                                    <div className="col-md-9 col-6"><span style={{textTransform:'uppercase'}} className="text-danger mt-1">delet this or increment Number</span></div>
+                                    <div className="col-md-9 col-6"><span style={{textTransform:'uppercase'}} className="text-danger mt-1">delete this or increment Number</span></div>
                                 :
                                 ''
                                 }
