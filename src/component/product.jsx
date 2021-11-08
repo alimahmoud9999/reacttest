@@ -8,6 +8,7 @@ export class product extends Component {
     //     console.log('aa')
     // }
     render() {
+        const {product,onIncrement,onDecrement,onDelete}= this.props;
         return (
             <div style={{
                 border: '1px solid #eee',
@@ -20,9 +21,9 @@ export class product extends Component {
                         <div className="row">
                             <div className="col-md-4">
                                 <div className="row ">
-                                    <div className="col-md-2 col"><Link to={`product/${this.props.product.id}`}>{this.props.product.name}</Link></div>
+                                    <div className="col-md-2 col"><Link to={`product/${product.id}`}>{product.name}</Link></div>
                                     <div className="col-md-1 col-2"><span style={{ width: 40, height: 40, fontSize: 17, lineHeight: '28px' }}
-                                        className={this.props.product.count === 0 ? 'badge bg-danger mt-1' : 'badge bg-primary mt-1'}>{this.props.product.count}</span>
+                                        className={product.count === 0 ? 'badge bg-danger mt-1' : 'badge bg-primary mt-1'}>{product.count}</span>
                                     </div>
                                 </div>
                             </div>
@@ -30,13 +31,13 @@ export class product extends Component {
                             <div className="col-md-8">
                                 <div className="row ">
                                     <div className="col-md-1 col-2">
-                                        <button className="btn btn-primary" onClick={() => this.props.onIncrement(this.props.product)}> <i class="fas fa-plus"></i> </button>
+                                        <button className="btn btn-primary" onClick={() => onIncrement(product)}> <i class="fas fa-plus"></i> </button>
                                     </div>
                                     <div className="col-md-1 col-2">
-                                        <button className="btn btn-primary" onClick={() => this.props.onDecrement(this.props.product)}> <i class="fas fa-minus"></i> </button>
+                                        <button className="btn btn-primary" onClick={() => onDecrement(product)}> <i class="fas fa-minus"></i> </button>
                                     </div>
                                     <div className="col-md-1 col-2">
-                                        <button className="btn btn-primary" onClick={() => this.props.onDelete(this.props.product)}> <i class="fas fa-trash"></i> </button>
+                                        <button className="btn btn-primary" onClick={() => onDelete(product)}> <i class="fas fa-trash"></i> </button>
                                     </div>
                                     {this.props.product.count <= 0 ?
                                         <div className="col-md-9 col-6">

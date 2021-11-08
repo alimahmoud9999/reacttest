@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { Link ,NavLink} from 'react-router-dom'
 import { Redirect, Route, Switch } from "react-router-dom";
 
 import OurCompany from './ourcompany'
@@ -16,10 +16,10 @@ export class About extends Component {
                     <div className="col-lg-2">
                     <ul>
                     <li>
-                        <Link to="/about/team">Our Team</Link>
+                        <NavLink className="nav-link" to="/about/team">Our Team</NavLink>
                     </li>
                     <li>
-                        <Link to="/about/company">Our company</Link>
+                        <NavLink className="nav-link" to="/about/company">Our company</NavLink>
                     </li>
                 </ul>
                     </div>

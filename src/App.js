@@ -98,8 +98,8 @@ class App extends Component {
             onDelete={this.deleteHandler} 
             />} /> */}
 
-          <Route path="/" exact component={Home} />
-
+          <Route path="/home" exact component={Home} />
+          <Redirect from="/" to="/home" />
           <Redirect to="/notfound" />
         </Switch>
       </div>

@@ -9,9 +9,9 @@ class Productdetails extends React.Component {
     }
     render() { 
         const a =qs.parse(this.props.location.search)
-        // const s = qs.parse(this.props.history.params.id)
-        const product =this.props.products.filter( c=> c.id === parseInt(this.props.match.params.id))[0]
-
+        console.log(a)
+        const product =this.props.products.find( c=> c.id === parseInt(this.props.match.params.id))
+        console.log(product)
         if (!product) return <Redirect to="/notfound" />
 
         
